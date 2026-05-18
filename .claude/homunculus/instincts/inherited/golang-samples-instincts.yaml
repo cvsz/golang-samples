@@ -1,0 +1,344 @@
+# Instincts generated from https://github.com/cvsz/golang-samples
+# Generated: 2026-05-18T19:28:52.703Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: golang-samples-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore(deps): bump the go_modules group across 84 directories with 7 updates
+
+---
+id: golang-samples-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Commit Length
+
+## Action
+
+Write moderate-length commit messages (~75 characters)
+
+## Evidence
+
+- Average commit message length: 75 chars
+- Based on 1 commits
+
+---
+id: golang-samples-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: golang-samples-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: golang-samples-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: golang-samples-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: golang-samples-workflow-bulk-go-module-dependency-update
+trigger: "when doing bulk go module dependency update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cvsz/golang-samples
+---
+
+# Golang Samples Workflow Bulk Go Module Dependency Update
+
+## Action
+
+Follow the bulk-go-module-dependency-update workflow:
+1. Identify outdated dependencies (often via automation, e.g., Dependabot).
+2. For each affected subdirectory, update the relevant dependency versions in go.mod.
+3. Run 'go mod tidy' or equivalent to update go.sum.
+4. Commit all changed go.mod and go.sum files together in a single commit.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: **/go.mod, **/go.sum
+
+---
+id: golang-samples-instinct-camelcase-files
+trigger: "When creating or renaming a file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Camelcase Files
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: golang-samples-instinct-camelcase-functions
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Camelcase Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: golang-samples-instinct-pascalcase-classes
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Pascalcase Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: golang-samples-instinct-screaming-constants
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Screaming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: golang-samples-instinct-relative-imports
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Relative Imports
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: golang-samples-instinct-named-exports
+trigger: "When exporting functions or variables"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: golang-samples-instinct-test-separate-folder
+trigger: "When adding tests for a package"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Test Separate Folder
+
+## Action
+
+Place test files in a separate test location, not mixed with source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: golang-samples-instinct-conventional-commits-chore
+trigger: "When committing dependency or maintenance updates"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Conventional Commits Chore
+
+## Action
+
+Prefix commit message with 'chore' following conventional commit format
+
+## Evidence
+
+- Seen in commit: chore(deps): bump the go_modules group across 84 directories with 7 updates
+- Pattern in commits.prefixes
+
+---
+id: golang-samples-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Commit Length
+
+## Action
+
+Keep commit message length around 75 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: golang-samples-instinct-bulk-go-module-update
+trigger: "When dependencies need to be updated across multiple Go sample directories (often detected by automation like Dependabot)"
+confidence: 0.98
+domain: workflow
+source: repo-analysis
+source_repo: cvsz/golang-samples
+---
+
+# Golang Samples Instinct Bulk Go Module Update
+
+## Action
+
+Update all affected go.mod and go.sum files, run 'go mod tidy', and commit all changes together in a single commit with a 'chore(deps):' message
+
+## Evidence
+
+- bulk-go-module-dependency-update workflow
+- Seen in commit: chore(deps): bump the go_modules group across 84 directories with 7 updates
+
