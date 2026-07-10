@@ -1,7 +1,7 @@
 module github.com/GoogleCloudPlatform/golang-samples/run
 
-go 1.24.0
+go 1.25.0
 
-require cloud.google.com/go/compute/metadata v0.6.0
+require cloud.google.com/go/compute/metadata v0.8.0
 
-require golang.org/x/sys v0.29.0 // indirect
+require golang.org/x/sys v0.45.0 // indirect
